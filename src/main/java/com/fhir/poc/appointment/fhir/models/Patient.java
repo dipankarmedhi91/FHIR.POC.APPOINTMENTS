@@ -1,10 +1,16 @@
 package com.fhir.poc.appointment.fhir.models;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.ArrayList;
 
+@Document
 public class Patient {
-    private String resourceType;
+    @Id
     private String id;
+    private String resourceType;
+
     Text TextObject;
     ArrayList< Object > identifier = new ArrayList <> ();
     private boolean active;
