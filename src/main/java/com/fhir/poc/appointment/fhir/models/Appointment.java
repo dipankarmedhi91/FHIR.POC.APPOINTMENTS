@@ -1,10 +1,16 @@
 package com.fhir.poc.appointment.fhir.models;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.ArrayList;
 
+@Document
 public class Appointment {
-    private String resourceType;
+    @Id
     private String id;
+    private String resourceType;
+
     Text TextObject;
     private String status;
     ArrayList< Object > serviceCategory = new ArrayList <> ();
