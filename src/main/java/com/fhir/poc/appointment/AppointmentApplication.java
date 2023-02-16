@@ -12,14 +12,6 @@ public class AppointmentApplication {
 		SpringApplication.run(AppointmentApplication.class, args);
 	}
 
-//	@Bean
-//	CommandLineRunner runner(PatientRepository repository){
-//		return args -> {
-//			Patient patient = new Patient("John","Doe","John@gmail.com",30,"male");
-//
-//			repository.insert(patient);
-//		};
-//	}
 
 
 }
