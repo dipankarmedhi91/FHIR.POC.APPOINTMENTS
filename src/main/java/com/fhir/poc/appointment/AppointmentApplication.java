@@ -31,13 +31,10 @@ public class AppointmentApplication {
 	}
 
 	@Bean
-	public Docket productApi() {
+	public Docket patientApi() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
 				.apis(RequestHandlerSelectors.basePackage("com.fhir.poc"))
 				.build()
 				.apiInfo(apiInfo());
 	}
-
-
-
 }

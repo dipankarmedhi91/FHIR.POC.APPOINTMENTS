@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class PatientController {
 
     @PostMapping
     public ResponseEntity<?> createPatient(@RequestBody Patient patient){
+        System.out.println("--------------"+patient);
         Patient p = patientService.createPatient(patient);
         return new ResponseEntity<>(p, HttpStatus.CREATED);
     }
